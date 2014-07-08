@@ -23,6 +23,7 @@
 		737966D2196BCF01002CB636 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 737966D1196BCF01002CB636 /* Utility.m */; };
 		737966D9196BDB96002CB636 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 737966D6196BDB96002CB636 /* libWeiboSDK.a */; };
 		737966DE196BDE2C002CB636 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 737966DD196BDE2C002CB636 /* WeiboSDK.bundle */; };
+		737966E1196BE1FA002CB636 /* SinaSDKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 737966E0196BE1FA002CB636 /* SinaSDKManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		737966D6196BDB96002CB636 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		737966D8196BDB96002CB636 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		737966DD196BDE2C002CB636 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		737966DF196BE1FA002CB636 /* SinaSDKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaSDKManager.h; sourceTree = "<group>"; };
+		737966E0196BE1FA002CB636 /* SinaSDKManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaSDKManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +176,8 @@
 		737966C5196BCDA9002CB636 /* OperateMananger */ = {
 			isa = PBXGroup;
 			children = (
+				737966DF196BE1FA002CB636 /* SinaSDKManager.h */,
+				737966E0196BE1FA002CB636 /* SinaSDKManager.m */,
 			);
 			path = OperateMananger;
 			sourceTree = SOURCE_ROOT;
@@ -326,6 +331,7 @@
 				737966D2196BCF01002CB636 /* Utility.m in Sources */,
 				736A9AB51966ABD200C71889 /* main.m in Sources */,
 				737966CE196BCEA5002CB636 /* HomeViewController.m in Sources */,
+				737966E1196BE1FA002CB636 /* SinaSDKManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "SinaSDKManager.h"
+
 #import "HomeViewController.h"
 
 
@@ -18,6 +20,15 @@
     self.window.rootViewController = self.homeNav;
 }
 
+//注册分享的app平台
+- (void)registeAppKey
+{
+    [[SinaSDKManager shareSinaManager] registeAppKey];
+    
+    
+    
+}
+
 #pragma mark -创建页面
 - (void)creatViews
 {
@@ -26,7 +37,6 @@
     self.homeNav.navigationBar.translucent = NO;
 }
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -34,11 +44,18 @@
     [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait];
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
     
+    [self registeAppKey];
+    
     [self creatViews];
     [self setHomeViewController];
     
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [[SinaSDKManager shareSinaManager] schemeURL:url];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

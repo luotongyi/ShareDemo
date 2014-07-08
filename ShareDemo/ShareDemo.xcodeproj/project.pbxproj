@@ -21,6 +21,8 @@
 		737966CB196BCE75002CB636 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737966CA196BCE75002CB636 /* BaseViewController.m */; };
 		737966CE196BCEA5002CB636 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737966CD196BCEA5002CB636 /* HomeViewController.m */; };
 		737966D2196BCF01002CB636 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 737966D1196BCF01002CB636 /* Utility.m */; };
+		737966D9196BDB96002CB636 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 737966D6196BDB96002CB636 /* libWeiboSDK.a */; };
+		737966DC196BDBAC002CB636 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 737966DB196BDBAC002CB636 /* WeiboSDK.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,9 @@
 		737966D1196BCF01002CB636 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		737966D3196BCF78002CB636 /* GlobalFiles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalFiles.h; sourceTree = "<group>"; };
 		737966D4196BD0F8002CB636 /* PublicDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicDefines.h; sourceTree = "<group>"; };
+		737966D6196BDB96002CB636 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
+		737966D8196BDB96002CB636 /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+		737966DB196BDBAC002CB636 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +72,7 @@
 				736A9AAB1966ABD200C71889 /* CoreGraphics.framework in Frameworks */,
 				736A9AAD1966ABD200C71889 /* UIKit.framework in Frameworks */,
 				736A9AA91966ABD200C71889 /* Foundation.framework in Frameworks */,
+				737966D9196BDB96002CB636 /* libWeiboSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +165,7 @@
 		737966C4196BCDA9002CB636 /* OpenSource */ = {
 			isa = PBXGroup;
 			children = (
+				737966D5196BDB96002CB636 /* libWeiboSDK */,
 			);
 			path = OpenSource;
 			sourceTree = SOURCE_ROOT;
@@ -207,6 +214,16 @@
 			);
 			path = Utility;
 			sourceTree = SOURCE_ROOT;
+		};
+		737966D5196BDB96002CB636 /* libWeiboSDK */ = {
+			isa = PBXGroup;
+			children = (
+				737966D6196BDB96002CB636 /* libWeiboSDK.a */,
+				737966DB196BDBAC002CB636 /* WeiboSDK.bundle */,
+				737966D8196BDB96002CB636 /* WeiboSDK.h */,
+			);
+			path = libWeiboSDK;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -285,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				736A9AB31966ABD200C71889 /* InfoPlist.strings in Resources */,
+				737966DC196BDBAC002CB636 /* WeiboSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +445,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShareDemo/ShareDemo-Prefix.pch";
 				INFOPLIST_FILE = "ShareDemo/ShareDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenSource/libWeiboSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -438,6 +460,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShareDemo/ShareDemo-Prefix.pch";
 				INFOPLIST_FILE = "ShareDemo/ShareDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenSource/libWeiboSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

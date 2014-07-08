@@ -28,6 +28,7 @@
     [super loadView];
     
     UIView *bv = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight(self))];
+    bv.backgroundColor = [UIColor lightGrayColor];
     self.view = bv;
 }
 

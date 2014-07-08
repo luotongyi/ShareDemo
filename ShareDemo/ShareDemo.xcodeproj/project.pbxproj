@@ -18,6 +18,9 @@
 		736A9ACD1966ABD300C71889 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736A9AAC1966ABD200C71889 /* UIKit.framework */; };
 		736A9AD51966ABD300C71889 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 736A9AD31966ABD300C71889 /* InfoPlist.strings */; };
 		736A9AD71966ABD300C71889 /* ShareDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 736A9AD61966ABD300C71889 /* ShareDemoTests.m */; };
+		737966CB196BCE75002CB636 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737966CA196BCE75002CB636 /* BaseViewController.m */; };
+		737966CE196BCEA5002CB636 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737966CD196BCEA5002CB636 /* HomeViewController.m */; };
+		737966D2196BCF01002CB636 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 737966D1196BCF01002CB636 /* Utility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,14 @@
 		736A9AD21966ABD300C71889 /* ShareDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShareDemoTests-Info.plist"; sourceTree = "<group>"; };
 		736A9AD41966ABD300C71889 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		736A9AD61966ABD300C71889 /* ShareDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareDemoTests.m; sourceTree = "<group>"; };
+		737966C9196BCE75002CB636 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		737966CA196BCE75002CB636 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		737966CC196BCEA5002CB636 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		737966CD196BCEA5002CB636 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		737966D0196BCF01002CB636 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		737966D1196BCF01002CB636 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		737966D3196BCF78002CB636 /* GlobalFiles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalFiles.h; sourceTree = "<group>"; };
+		737966D4196BD0F8002CB636 /* PublicDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +116,12 @@
 		736A9AAE1966ABD200C71889 /* ShareDemo */ = {
 			isa = PBXGroup;
 			children = (
-				736A9AB71966ABD200C71889 /* AppDelegate.h */,
-				736A9AB81966ABD200C71889 /* AppDelegate.m */,
+				737966C6196BCDD5002CB636 /* AppDelegate */,
+				737966CF196BCEDD002CB636 /* Utility */,
+				737966C7196BCE11002CB636 /* ViewControllers */,
+				737966C8196BCE52002CB636 /* BaseViewController */,
+				737966C5196BCDA9002CB636 /* OperateMananger */,
+				737966C4196BCDA9002CB636 /* OpenSource */,
 				736A9AAF1966ABD200C71889 /* Supporting Files */,
 			);
 			path = ShareDemo;
@@ -140,6 +155,58 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		737966C4196BCDA9002CB636 /* OpenSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OpenSource;
+			sourceTree = SOURCE_ROOT;
+		};
+		737966C5196BCDA9002CB636 /* OperateMananger */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OperateMananger;
+			sourceTree = SOURCE_ROOT;
+		};
+		737966C6196BCDD5002CB636 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				736A9AB71966ABD200C71889 /* AppDelegate.h */,
+				736A9AB81966ABD200C71889 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		737966C7196BCE11002CB636 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				737966CC196BCEA5002CB636 /* HomeViewController.h */,
+				737966CD196BCEA5002CB636 /* HomeViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = SOURCE_ROOT;
+		};
+		737966C8196BCE52002CB636 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				737966C9196BCE75002CB636 /* BaseViewController.h */,
+				737966CA196BCE75002CB636 /* BaseViewController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = SOURCE_ROOT;
+		};
+		737966CF196BCEDD002CB636 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				737966D0196BCF01002CB636 /* Utility.h */,
+				737966D1196BCF01002CB636 /* Utility.m */,
+				737966D3196BCF78002CB636 /* GlobalFiles.h */,
+				737966D4196BD0F8002CB636 /* PublicDefines.h */,
+			);
+			path = Utility;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -237,7 +304,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				736A9AB91966ABD200C71889 /* AppDelegate.m in Sources */,
+				737966CB196BCE75002CB636 /* BaseViewController.m in Sources */,
+				737966D2196BCF01002CB636 /* Utility.m in Sources */,
 				736A9AB51966ABD200C71889 /* main.m in Sources */,
+				737966CE196BCEA5002CB636 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +502,7 @@
 				736A9ADC1966ABD300C71889 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		736A9ADD1966ABD300C71889 /* Build configuration list for PBXNativeTarget "ShareDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +511,7 @@
 				736A9ADF1966ABD300C71889 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

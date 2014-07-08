@@ -8,11 +8,36 @@
 
 #import "AppDelegate.h"
 
+#import "HomeViewController.h"
+
+
 @implementation AppDelegate
+
+- (void)setHomeViewController
+{
+    self.window.rootViewController = self.homeNav;
+}
+
+#pragma mark -创建页面
+- (void)creatViews
+{
+    HomeViewController *hvc = [[HomeViewController alloc]init];
+    self.homeNav = [[UINavigationController alloc]initWithRootViewController:hvc];
+    self.homeNav.navigationBar.translucent = NO;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    
+    [self creatViews];
+    [self setHomeViewController];
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							

@@ -12,4 +12,10 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong, nonatomic) UINavigationController *homeNav;
+
+
+//设置主页
+- (void)setHomeViewController;
+
 @end

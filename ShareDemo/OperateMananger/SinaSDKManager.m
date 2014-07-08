@@ -124,6 +124,7 @@
     return message;
 }
 
+//分享还需要重新处理
 - (void)sendShareRequest
 {
     WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:[self messageToShare]];

@@ -13,8 +13,9 @@
 #import "Utility.h"
 #import "PublicDefines.h"
 
-
-
+#import "SinaSDKManager.h"
+#import "UMengSDKManager.h"
+#import "WeChatSDKManager.h"
 
 
 

@@ -124,7 +124,6 @@
     return message;
 }
 
-//分享还需要重新处理
 - (void)sendShareRequest
 {
     WBSendMessageToWeiboRequest *request = [WBSendMessageToWeiboRequest requestWithMessage:[self messageToShare]];
@@ -144,7 +143,13 @@
      */
 }
 
-#pragma mark -messageToShare Delegate
+- (void)getResponse
+{
+    WBProvideMessageForWeiboResponse *response = [WBProvideMessageForWeiboResponse responseWithMessage:[self messageToShare]];
+    NSLog(@"%@",response);
+}
+
+#pragma mark -shareRequest Delegate
 - (void)request:(WBHttpRequest *)request didFinishLoadingWithResult:(NSString *)result
 {
     

@@ -8,8 +8,6 @@
 
 #import "AppDelegate.h"
 
-#import "SinaSDKManager.h"
-
 #import "HomeViewController.h"
 
 
@@ -23,9 +21,12 @@
 //注册分享的app平台
 - (void)registeAppKey
 {
+    //Umeng不需要配置URLScheme
+    [[UMengSDKManager shareUMengManager] registeUMengApp];
+    
+    //需要配置URLScheme
     [[SinaSDKManager shareSinaManager] registeAppKey];
-    
-    
+    [[WeChatSDKManager shareWeChatManager] registeWeChatApp];
     
 }
 
@@ -44,7 +45,7 @@
     [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait];
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
     
-    [self registeAppKey];
+//    [self registeAppKey];
     
     [self creatViews];
     [self setHomeViewController];
@@ -55,6 +56,7 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
+    NSLog(@"-----%@",url);
     return [[SinaSDKManager shareSinaManager] schemeURL:url];
 }
 							

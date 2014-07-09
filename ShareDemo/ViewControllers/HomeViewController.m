@@ -27,6 +27,8 @@
 {
     [super loadView];
     self.title = @"主页";
+    
+    
 }
 
 - (void)viewDidLoad

@@ -10,7 +10,7 @@
 #import "WeiboSDK.h"
 
 
-#define kWbAppKey @"1917233942"
+#define kWbAppKey @"2316968861"
 #define kWbAppRedirectURL @"https://api.weibo.com/oauth2/default.html"
 
 @class SinaSDKManager;
@@ -43,5 +43,9 @@
 - (WBMessageObject *)messageToShare;
 
 - (void)sendShareRequest;
+
+- (void)shareRequest;
+
+- (void)getResponse;
 
 @end

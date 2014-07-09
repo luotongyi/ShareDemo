@@ -35,6 +35,11 @@
 		737966FC196CEE53002CB636 /* UMengSDKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 737966FB196CEE53002CB636 /* UMengSDKManager.m */; };
 		737966FF196CEE65002CB636 /* WeChatSDKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 737966FE196CEE65002CB636 /* WeChatSDKManager.m */; };
 		73796701196CF385002CB636 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 73796700196CF385002CB636 /* libz.dylib */; };
+		73796704196D1921002CB636 /* TCWbSDKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73796703196D1921002CB636 /* TCWbSDKManager.m */; };
+		73796706196D294E002CB636 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73796705196D294E002CB636 /* Security.framework */; };
+		73796708196D2955002CB636 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73796707196D2955002CB636 /* Social.framework */; };
+		7379670A196D295C002CB636 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73796709196D295C002CB636 /* Accounts.framework */; };
+		7379670F196D2C4D002CB636 /* libTCWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7379670C196D2C4D002CB636 /* libTCWeiboSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +98,14 @@
 		737966FD196CEE65002CB636 /* WeChatSDKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeChatSDKManager.h; sourceTree = "<group>"; };
 		737966FE196CEE65002CB636 /* WeChatSDKManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeChatSDKManager.m; sourceTree = "<group>"; };
 		73796700196CF385002CB636 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		73796702196D1921002CB636 /* TCWbSDKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCWbSDKManager.h; sourceTree = "<group>"; };
+		73796703196D1921002CB636 /* TCWbSDKManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCWbSDKManager.m; sourceTree = "<group>"; };
+		73796705196D294E002CB636 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		73796707196D2955002CB636 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		73796709196D295C002CB636 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		7379670C196D2C4D002CB636 /* libTCWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTCWeiboSDK.a; sourceTree = "<group>"; };
+		7379670D196D2C4D002CB636 /* WeiboApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboApi.h; sourceTree = "<group>"; };
+		7379670E196D2C4D002CB636 /* WeiboApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboApiObject.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +113,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7379670F196D2C4D002CB636 /* libTCWeiboSDK.a in Frameworks */,
+				7379670A196D295C002CB636 /* Accounts.framework in Frameworks */,
+				73796708196D2955002CB636 /* Social.framework in Frameworks */,
+				73796706196D294E002CB636 /* Security.framework in Frameworks */,
 				73796701196CF385002CB636 /* libz.dylib in Frameworks */,
 				736A9AAB1966ABD200C71889 /* CoreGraphics.framework in Frameworks */,
 				736A9AAD1966ABD200C71889 /* UIKit.framework in Frameworks */,
@@ -145,6 +162,9 @@
 		736A9AA71966ABD200C71889 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73796709196D295C002CB636 /* Accounts.framework */,
+				73796707196D2955002CB636 /* Social.framework */,
+				73796705196D294E002CB636 /* Security.framework */,
 				73796700196CF385002CB636 /* libz.dylib */,
 				736A9AA81966ABD200C71889 /* Foundation.framework */,
 				736A9AAA1966ABD200C71889 /* CoreGraphics.framework */,
@@ -201,9 +221,10 @@
 		737966C4196BCDA9002CB636 /* OpenSource */ = {
 			isa = PBXGroup;
 			children = (
-				737966F5196CEBF7002CB636 /* libWeChatSDK */,
 				737966F0196CEB4A002CB636 /* libMobClickSDK */,
+				737966F5196CEBF7002CB636 /* libWeChatSDK */,
 				737966D5196BDB96002CB636 /* libWeiboSDK */,
+				7379670B196D2C4D002CB636 /* libTCWeiboSDK */,
 			);
 			path = OpenSource;
 			sourceTree = SOURCE_ROOT;
@@ -217,6 +238,8 @@
 				737966E0196BE1FA002CB636 /* SinaSDKManager.m */,
 				737966FD196CEE65002CB636 /* WeChatSDKManager.h */,
 				737966FE196CEE65002CB636 /* WeChatSDKManager.m */,
+				73796702196D1921002CB636 /* TCWbSDKManager.h */,
+				73796703196D1921002CB636 /* TCWbSDKManager.m */,
 			);
 			path = OperateMananger;
 			sourceTree = SOURCE_ROOT;
@@ -308,6 +331,16 @@
 				737966F8196CEBF7002CB636 /* WXApiObject.h */,
 			);
 			path = libWeChatSDK;
+			sourceTree = "<group>";
+		};
+		7379670B196D2C4D002CB636 /* libTCWeiboSDK */ = {
+			isa = PBXGroup;
+			children = (
+				7379670C196D2C4D002CB636 /* libTCWeiboSDK.a */,
+				7379670D196D2C4D002CB636 /* WeiboApi.h */,
+				7379670E196D2C4D002CB636 /* WeiboApiObject.h */,
+			);
+			path = libTCWeiboSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +451,7 @@
 				736A9AB51966ABD200C71889 /* main.m in Sources */,
 				737966CE196BCEA5002CB636 /* HomeViewController.m in Sources */,
 				737966E1196BE1FA002CB636 /* SinaSDKManager.m in Sources */,
+				73796704196D1921002CB636 /* TCWbSDKManager.m in Sources */,
 				737966FF196CEE65002CB636 /* WeChatSDKManager.m in Sources */,
 				737966FC196CEE53002CB636 /* UMengSDKManager.m in Sources */,
 			);
@@ -548,6 +582,7 @@
 					"$(PROJECT_DIR)/OpenSource/libWeiboSDK",
 					"$(PROJECT_DIR)/OpenSource/libMobClickSDK",
 					"$(PROJECT_DIR)/OpenSource/libWeChatSDK",
+					"$(PROJECT_DIR)/OpenSource/libTCWeiboSDK",
 				);
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -566,6 +601,7 @@
 					"$(PROJECT_DIR)/OpenSource/libWeiboSDK",
 					"$(PROJECT_DIR)/OpenSource/libMobClickSDK",
 					"$(PROJECT_DIR)/OpenSource/libWeChatSDK",
+					"$(PROJECT_DIR)/OpenSource/libTCWeiboSDK",
 				);
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";

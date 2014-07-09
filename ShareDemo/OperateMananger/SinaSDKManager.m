@@ -42,7 +42,7 @@
 - (void)weiboLogin
 {
     WBAuthorizeRequest *request = [WBAuthorizeRequest request];
-    request.redirectURI = kWbAppRedirectURL;
+    request.redirectURI = kWbAppRedirectURI;
     request.scope = @"all";
     [WeiboSDK sendRequest:request];
 }

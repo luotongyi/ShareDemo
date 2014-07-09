@@ -12,11 +12,14 @@
 #define kWXApiAppKey @"wxd930ea5d5a258f4f"
 
 @interface WeChatSDKManager : NSObject<WXApiDelegate>
-
+{
+    enum WXScene _scene;
+}
 
 + (WeChatSDKManager *)shareWeChatManager;
 
 - (void)registeWeChatApp;
 
+-(void) changeScene:(NSInteger)scene;
 
 @end

@@ -27,7 +27,7 @@
     //需要配置URLScheme
     [[SinaSDKManager shareSinaManager] registeAppKey];
     [[WeChatSDKManager shareWeChatManager] registeWeChatApp];
-    
+    [[TCWbSDKManager shareTCWbManager] registeTCWbApp];
 }
 
 #pragma mark -创建页面
@@ -57,6 +57,7 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     NSLog(@"-----%@",url);
+    NSLog(@"-----%@",[url absoluteString]);
     return [[SinaSDKManager shareSinaManager] schemeURL:url];
 }
 							

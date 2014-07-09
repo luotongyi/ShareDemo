@@ -11,7 +11,7 @@
 
 
 #define kWbAppKey @"2316968861"
-#define kWbAppRedirectURL @"https://api.weibo.com/oauth2/default.html"
+#define kWbAppRedirectURI @"https://api.weibo.com/oauth2/default.html"
 
 @class SinaSDKManager;
 @protocol SinaManagerDelegate <NSObject>

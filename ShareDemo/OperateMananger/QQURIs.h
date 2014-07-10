@@ -13,8 +13,8 @@
 #define kTCWbAppKey @"4c0e8f21f4155304c1298181a9265be6"
 #define kTCWbSecretURI @"http://t.qq.com"//不知道在哪里配置URI
 
-#define WiressSDKDemoAppKey     @"801213517"
-#define WiressSDKDemoAppSecret  @"9819935c0ad171df934d0ffb340a3c2d"
-#define REDIRECTURI             @"http://www.ying7wang7.com"
+#define WiressSDKDemoAppKey     @"1101746616"
+#define WiressSDKDemoAppSecret  @"KEY:NYaoZ4Wv4bDPo3Nu"
+#define REDIRECTURI             @"http://t.qq.com"
 
 #endif

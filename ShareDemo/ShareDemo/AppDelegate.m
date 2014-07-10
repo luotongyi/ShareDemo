@@ -64,9 +64,12 @@
     {
         return [[WeChatSDKManager shareWeChatManager] schemeURL:url];
     }
+    else if ([sourceApplication isEqualToString:@"com.tencent.qq"])
+    {
+        return [[QQSDKManager shareQQManager] schemeURL:url];
+    }
     else
     {
-        
         return NO;
     }
 }

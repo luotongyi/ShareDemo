@@ -22,12 +22,13 @@
 - (void)registeAppKey
 {
     //Umeng不需要配置URLScheme
-    [[UMengSDKManager shareUMengManager] registeUMengApp];
+//    [[UMengSDKManager shareUMengManager] registeUMengApp];
     
     //需要配置URLScheme
     [[SinaSDKManager shareSinaManager] registeAppKey];
     [[WeChatSDKManager shareWeChatManager] registeWeChatApp];
     [[TCWbSDKManager shareTCWbManager] registeTCWbApp];
+    [[QQSDKManager shareQQManager] registeQQApp];
 }
 
 #pragma mark -创建页面
@@ -45,22 +46,31 @@
     [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait];
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
     
-//    [self registeAppKey];
+    [self registeAppKey];
     
     [self creatViews];
     [self setHomeViewController];
-    
     [self.window makeKeyAndVisible];
     return YES;
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    NSLog(@"-----%@",url);
-    NSLog(@"-----%@",[url absoluteString]);
-    return [[SinaSDKManager shareSinaManager] schemeURL:url];
+    if ([sourceApplication isEqualToString:@"com.sina.weibo"])
+    {
+        return [[SinaSDKManager shareSinaManager] schemeURL:url];
+    }
+    else if ([sourceApplication isEqualToString:@"com.tencent.xin"])
+    {
+        return [[WeChatSDKManager shareWeChatManager] schemeURL:url];
+    }
+    else
+    {
+        
+        return NO;
+    }
 }
-							
+				
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

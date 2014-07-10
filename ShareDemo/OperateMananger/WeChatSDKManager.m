@@ -34,12 +34,18 @@
 {
     [WXApi registerApp:kWXApiAppKey withDescription:@"ShareCollections"];
     //默认发送聊天界面
-    _scene = WXSceneSession;
+//    _scene = WXSceneSession;
+    _scene = WXSceneTimeline;
 }
 
 -(void) changeScene:(NSInteger)scene
 {
     _scene = scene;
+}
+
+- (BOOL)schemeURL:(NSURL *)url
+{
+    return [WXApi handleOpenURL:url delegate:self];
 }
 
 -(void) onReq:(BaseReq*)req

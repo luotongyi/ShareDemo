@@ -17,6 +17,6 @@
 #import "UMengSDKManager.h"
 #import "WeChatSDKManager.h"
 #import "TCWbSDKManager.h"
-
+#import "QQSDKManager.h"
 
 #endif

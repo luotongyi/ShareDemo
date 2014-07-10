@@ -8,10 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "WeiboApi.h"
-
-#define kTCWbAppKey @"801522462"
-#define kTCWbSecret @"4c0e8f21f4155304c1298181a9265be6"
-#define kTCWbSecretURI @"http://t.qq.com/luotongyi1139475967"
+#import "QQURIs.h"
 
 
 @interface TCWbSDKManager : NSObject<WeiboAuthDelegate,WeiboRequestDelegate>
@@ -26,5 +23,7 @@
 - (void)TCWbLoginOn:(UIViewController *)vc;
 
 - (void)TCWbLoginOff;
+
+- (BOOL)schemeURL:(NSURL *)url;
 
 @end

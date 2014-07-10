@@ -40,6 +40,15 @@
 		73796708196D2955002CB636 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73796707196D2955002CB636 /* Social.framework */; };
 		7379670A196D295C002CB636 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73796709196D295C002CB636 /* Accounts.framework */; };
 		7379670F196D2C4D002CB636 /* libTCWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7379670C196D2C4D002CB636 /* libTCWeiboSDK.a */; };
+		73796711196E24E9002CB636 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 73796710196E24E9002CB636 /* libsqlite3.dylib */; };
+		73796713196E24F7002CB636 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73796712196E24F7002CB636 /* SystemConfiguration.framework */; };
+		73796715196E250B002CB636 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73796714196E250B002CB636 /* CoreFoundation.framework */; };
+		73796717196E2523002CB636 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 73796716196E2523002CB636 /* libz.1.1.3.dylib */; };
+		73796719196E252F002CB636 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 73796718196E252F002CB636 /* libstdc++.dylib */; };
+		7379671D196E286E002CB636 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7379671B196E286E002CB636 /* TencentOpenAPI.framework */; };
+		7379671E196E286E002CB636 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7379671C196E286E002CB636 /* TencentOpenApi_IOS_Bundle.bundle */; };
+		73796721196E28B1002CB636 /* QQSDKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73796720196E28B1002CB636 /* QQSDKManager.m */; };
+		73796724196E2F9E002CB636 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73796723196E2F9E002CB636 /* CoreTelephony.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +115,17 @@
 		7379670C196D2C4D002CB636 /* libTCWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTCWeiboSDK.a; sourceTree = "<group>"; };
 		7379670D196D2C4D002CB636 /* WeiboApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboApi.h; sourceTree = "<group>"; };
 		7379670E196D2C4D002CB636 /* WeiboApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboApiObject.h; sourceTree = "<group>"; };
+		73796710196E24E9002CB636 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		73796712196E24F7002CB636 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		73796714196E250B002CB636 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		73796716196E2523002CB636 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		73796718196E252F002CB636 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		7379671B196E286E002CB636 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		7379671C196E286E002CB636 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		7379671F196E28B1002CB636 /* QQSDKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQSDKManager.h; sourceTree = "<group>"; };
+		73796720196E28B1002CB636 /* QQSDKManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQSDKManager.m; sourceTree = "<group>"; };
+		73796722196E2CE6002CB636 /* QQURIs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QQURIs.h; sourceTree = "<group>"; };
+		73796723196E2F9E002CB636 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +133,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73796724196E2F9E002CB636 /* CoreTelephony.framework in Frameworks */,
+				73796719196E252F002CB636 /* libstdc++.dylib in Frameworks */,
+				73796717196E2523002CB636 /* libz.1.1.3.dylib in Frameworks */,
+				73796715196E250B002CB636 /* CoreFoundation.framework in Frameworks */,
+				73796713196E24F7002CB636 /* SystemConfiguration.framework in Frameworks */,
+				73796711196E24E9002CB636 /* libsqlite3.dylib in Frameworks */,
 				7379670F196D2C4D002CB636 /* libTCWeiboSDK.a in Frameworks */,
 				7379670A196D295C002CB636 /* Accounts.framework in Frameworks */,
+				7379671D196E286E002CB636 /* TencentOpenAPI.framework in Frameworks */,
 				73796708196D2955002CB636 /* Social.framework in Frameworks */,
 				73796706196D294E002CB636 /* Security.framework in Frameworks */,
 				73796701196CF385002CB636 /* libz.dylib in Frameworks */,
@@ -162,6 +189,12 @@
 		736A9AA71966ABD200C71889 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73796723196E2F9E002CB636 /* CoreTelephony.framework */,
+				73796718196E252F002CB636 /* libstdc++.dylib */,
+				73796716196E2523002CB636 /* libz.1.1.3.dylib */,
+				73796714196E250B002CB636 /* CoreFoundation.framework */,
+				73796712196E24F7002CB636 /* SystemConfiguration.framework */,
+				73796710196E24E9002CB636 /* libsqlite3.dylib */,
 				73796709196D295C002CB636 /* Accounts.framework */,
 				73796707196D2955002CB636 /* Social.framework */,
 				73796705196D294E002CB636 /* Security.framework */,
@@ -221,6 +254,7 @@
 		737966C4196BCDA9002CB636 /* OpenSource */ = {
 			isa = PBXGroup;
 			children = (
+				7379671A196E286E002CB636 /* libTcOpenApiSDK */,
 				737966F0196CEB4A002CB636 /* libMobClickSDK */,
 				737966F5196CEBF7002CB636 /* libWeChatSDK */,
 				737966D5196BDB96002CB636 /* libWeiboSDK */,
@@ -238,8 +272,11 @@
 				737966E0196BE1FA002CB636 /* SinaSDKManager.m */,
 				737966FD196CEE65002CB636 /* WeChatSDKManager.h */,
 				737966FE196CEE65002CB636 /* WeChatSDKManager.m */,
+				73796722196E2CE6002CB636 /* QQURIs.h */,
 				73796702196D1921002CB636 /* TCWbSDKManager.h */,
 				73796703196D1921002CB636 /* TCWbSDKManager.m */,
+				7379671F196E28B1002CB636 /* QQSDKManager.h */,
+				73796720196E28B1002CB636 /* QQSDKManager.m */,
 			);
 			path = OperateMananger;
 			sourceTree = SOURCE_ROOT;
@@ -343,6 +380,15 @@
 			path = libTCWeiboSDK;
 			sourceTree = "<group>";
 		};
+		7379671A196E286E002CB636 /* libTcOpenApiSDK */ = {
+			isa = PBXGroup;
+			children = (
+				7379671B196E286E002CB636 /* TencentOpenAPI.framework */,
+				7379671C196E286E002CB636 /* TencentOpenApi_IOS_Bundle.bundle */,
+			);
+			path = libTcOpenApiSDK;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -425,6 +471,7 @@
 				737966DE196BDE2C002CB636 /* WeiboSDK.bundle in Resources */,
 				737966ED196CD925002CB636 /* icon-120.png in Resources */,
 				737966EC196CD925002CB636 /* Default@2x.png in Resources */,
+				7379671E196E286E002CB636 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				737966EA196CD925002CB636 /* Default-568h@2x.png in Resources */,
 				737966EB196CD925002CB636 /* Default.png in Resources */,
 			);
@@ -447,6 +494,7 @@
 			files = (
 				736A9AB91966ABD200C71889 /* AppDelegate.m in Sources */,
 				737966CB196BCE75002CB636 /* BaseViewController.m in Sources */,
+				73796721196E28B1002CB636 /* QQSDKManager.m in Sources */,
 				737966D2196BCF01002CB636 /* Utility.m in Sources */,
 				736A9AB51966ABD200C71889 /* main.m in Sources */,
 				737966CE196BCEA5002CB636 /* HomeViewController.m in Sources */,
@@ -499,6 +547,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -540,6 +589,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -574,6 +624,11 @@
 		736A9ADB1966ABD300C71889 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenSource/libTcOpenApiSDK",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShareDemo/ShareDemo-Prefix.pch";
 				INFOPLIST_FILE = "ShareDemo/ShareDemo-Info.plist";
@@ -593,6 +648,11 @@
 		736A9ADC1966ABD300C71889 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenSource/libTcOpenApiSDK",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShareDemo/ShareDemo-Prefix.pch";
 				INFOPLIST_FILE = "ShareDemo/ShareDemo-Info.plist";

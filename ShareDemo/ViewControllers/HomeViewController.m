@@ -28,13 +28,16 @@
     [super loadView];
     self.title = @"主页";
     
-    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
+//    [[SinaSDKManager shareSinaManager] weiboLogin];
+//    [[WeChatSDKManager shareWeChatManager] sendTextContent];
+//    [[TCWbSDKManager shareTCWbManager] TCWbLoginOn:self];
+    [[QQSDKManager shareQQManager] QQLoginOn];
 }
 
 - (void)didReceiveMemoryWarning

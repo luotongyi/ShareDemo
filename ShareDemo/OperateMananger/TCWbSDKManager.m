@@ -32,12 +32,17 @@
 
 - (void)registeTCWbApp
 {
-    wbApi = [[WeiboApi alloc]initWithAppKey:kTCWbAppKey andSecret:kTCWbSecret andRedirectUri:kTCWbSecretURI andAuthModeFlag:0 andCachePolicy:0];
+    wbApi = [[WeiboApi alloc]initWithAppKey:kTCWbAppId andSecret:kTCWbAppKey andRedirectUri:kTCWbSecretURI andAuthModeFlag:0 andCachePolicy:0];
+}
+
+- (BOOL)schemeURL:(NSURL *)url
+{
+    return [wbApi handleOpenURL:url];
 }
 
 - (void)TCWbLoginOn:(UIViewController *)vc
 {
-    [wbApi loginWithDelegate:self andRootController:vc];
+    [wbApi loginWithDelegate:vc andRootController:vc];
 }
 
 - (void)TCWbLoginOff

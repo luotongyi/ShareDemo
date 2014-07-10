@@ -22,4 +22,8 @@
 
 -(void) changeScene:(NSInteger)scene;
 
+- (BOOL)schemeURL:(NSURL *)url;
+
+- (void) sendTextContent;
+
 @end
